@@ -8,7 +8,7 @@
 ## That said, I do try to comment and explain my coding choices, so feel free
 ## to take a look as a learning tool.
 ##
-## If this is the first file you're looking at, read the README to start! And
+## If this is the first file you're looking at, read INSTRUCTIONS.md to start! And
 ## then you can go to pronoun_setup.rpy for the intro blurb and actual
 ## changeable code.
 ##
