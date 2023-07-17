@@ -27,8 +27,8 @@
 ## "Don't say that to her, she's doing her best."
 ##
 ## The steps to set up the code are included alongside it with examples
-## and comments. If you haven't already, I also recommend you read the
-## README first!
+## and comments. If you haven't already, I also recommend you read 
+## INSTRUCTIONS.md first!
 ##
 ## If you use this code in your project,
 ## please credit me as Feniks @ feniksdev.com
