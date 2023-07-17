@@ -75,3 +75,7 @@ I am also planning on releasing a “multi-thumb slider bar” code soon, with c
 ![](https://img.itch.zone/aW1nLzEyODIzODk3LmdpZg==/original/c955SL.gif)  
 
 For more Ren'Py tutorials, check out my website [https://feniksdev.com](https://feniksdev.com)!
+
+## Like my work?
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/fen)
