@@ -4,7 +4,7 @@ Thank you for downloading In-Depth Pronouns for Ren'Py! I hope this code will he
 
 There are a lot of bits and bobs that make up this code, so here is an overview of your next steps:
 
-1. Make sure all the pronouns rpy files are inside your game/ folder somewhere. You can keep them in the pronouns/ subfolder, like YourGame/game/pronouns/pronoun_setup.rpy
+1. Make sure all the pronouns rpy files are inside your game/ folder somewhere. You can keep them in a pronouns/ subfolder, like YourGame/game/pronouns/pronoun_setup.rpy
 2. If you're using a version of Ren'Py before 7.5 (e.g. 7.4.11 or earlier), you will need to remove or comment out some code in `pronoun_screens.rpy`. At the bottom of `screen term_customization` is a line that looks like `if GetFocusRect("term_drop"):`. You will need to remove/comment that code until the end of the screen. Slightly earlier in that same screen is the screen action `CaptureFocus("term_drop")`. You will also need to replace that with the action `CycleCustomTerm(current_key, term)`. This will allow you to click to cycle through pronouns instead of using a dropdown.
 3. Otherwise, you're ready to go! Add the line `jump test_select_pronouns` somewhere early on in your script so you can test out the features.
 
@@ -33,6 +33,6 @@ You can also adjust any of the screens in `pronoun_screens.rpy` for your project
 
 ## Final Notes
 
-Thanks for reading through this README! If you use this code in your project, you can credit me as Feniks with a link to my website https://feniksdev.com/ - I also post Ren'Py tutorials on there! You can follow me on itch.io at https://feniksdev.itch.io/ to be notified of any future tool releases as well. In particular, I am releasing a multi-thumb slider soon which will complement the pronoun code and can be used as a frequency slider.
+Thanks for reading through these instructions! If you use this code in your project, you can credit me as Feniks with a link to my website https://feniksdev.com/ - I also post Ren'Py tutorials on there! You can follow me on itch.io at https://feniksdev.itch.io/ to be notified of any future tool releases as well. In particular, I am releasing a multi-thumb slider soon which will complement the pronoun code and can be used as a frequency slider.
 
 If you found this code useful, consider dropping me a ko-fi at https://ko-fi.com/fen/ I appreciate the support to help me keep releasing useful Ren'Py tools!
