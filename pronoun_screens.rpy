@@ -139,6 +139,8 @@ style pronouns_button:
     insensitive_background "#21212d"
 style pronouns_button_text:
     color "#fff"
+style pronouns_text:
+    color "#fff"
 style pronouns_label_text:
     color "#f7f7ed" bold True
     font gui.name_text_font
@@ -194,6 +196,11 @@ screen pick_multiple_pronouns():
                     xalign 0.5 left_padding 6
                     if pronoun in player_pronouns:
                         action CycleList(player_pronouns, 'pronoun')
+            ####################################################################
+            ## The following line can be uncommented if you would like to
+            ## include multi-bar pronoun frequency sliders.
+            ##
+            # use pronoun_frequency_sliders()
             vbox:
                 if len(player_pronouns) > 1:
                     ## Pronoun frequency sliders
@@ -211,6 +218,10 @@ screen pick_multiple_pronouns():
                                 xsize 300 text_adjust_spacing False yalign 0.5
                             bar value DictValue(pronoun_frequency, pron, 10, step=1):
                                 xsize 500 yalign 0.5
+                                ## Reset the pronoun frequency list so it's
+                                ## regenerated when pronouns are randomized.
+                                released SetVariable("pronoun_freq_list", None)
+            ####################################################################
 
         null height 20
         textbutton _("Confirm"):

@@ -27,8 +27,11 @@
 ## "Don't say that to her, she's doing her best."
 ##
 ## The steps to set up the code are included alongside it with examples
-## and comments. If you haven't already, I also recommend you read 
-## INSTRUCTIONS.md first!
+## and comments. If you haven't already, I also recommend you read the
+## INSTRUCTIONS first!
+##
+## Consider also looking at Multi-Thumb Bar for Ren'Py, which has an integration
+## with the pronouns system: https://feniksdev.itch.io/multi-thumb-bar-for-renpy
 ##
 ## If you use this code in your project,
 ## please credit me as Feniks @ feniksdev.com

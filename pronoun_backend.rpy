@@ -8,8 +8,8 @@
 ## That said, I do try to comment and explain my coding choices, so feel free
 ## to take a look as a learning tool.
 ##
-## If this is the first file you're looking at, read INSTRUCTIONS.md to start! And
-## then you can go to pronoun_setup.rpy for the intro blurb and actual
+## If this is the first file you're looking at, read the INSTRUCTIONS to start!
+## And then you can go to pronoun_setup.rpy for the intro blurb and actual
 ## changeable code.
 ##
 ################################################################################
@@ -120,8 +120,7 @@ init -10 python:
         @property
         def no_blank_input(self):
             """Return True if there are no blank fields in this object."""
-            return all([getattr(self, field).strip() for field in ["they",
-                "them", "their", "theirs", "themself"]])
+            return all(self.arg_tuple[:-1])
 
         def reset_pronouns(self, args):
             """
@@ -189,7 +188,7 @@ init -10 python:
             # Finally, get the entry corresponding specifically to this
             # pronoun set
             try:
-                return self.args[ind]
+                return renpy.substitute(self.args[ind])
             except IndexError:
                 # Out of range
                 if config.developer:
@@ -232,9 +231,9 @@ init -10 python:
             if (store.pronoun in store.plural_pronouns
                     or (store.pronoun == "custom"
                         and store.custom_pronouns.is_plural)):
-                return self.plural
+                return renpy.substitute(self.plural)
             else:
-                return self.singular
+                return renpy.substitute(self.singular)
 
 
     class Term():
@@ -328,7 +327,7 @@ init -10 python:
             current term preferences.
             """
             ## Grab the term from the player's custom terms dictionary
-            return get_custom_term(self.id)
+            return renpy.substitute(get_custom_term(self.id))
 
 
     def get_custom_term(id, selected_pronouns="unset"):
@@ -679,7 +678,7 @@ init -10 python:
             for pron in store.player_pronouns:
                 ## If the player has specified a frequency for this
                 ## pronoun, add it to the list that many times.
-                freq_list.extend([pron for x in range(store.pronoun_frequency.get(pronoun, 1))])
+                freq_list.extend([pron for x in range(store.pronoun_frequency.get(pron, 1))])
             if not freq_list:
                 ## If the list is empty, return
                 return
@@ -701,11 +700,6 @@ init -10 python:
     ## Add this to interact_callbacks so that it will be automatically run
     ## on every new line of dialogue.
     config.start_interact_callbacks.append(randomize_pronouns_per_line)
-
-    class OldPronoun(NoRollback):
-        def __init__(self):
-            super(OldPronoun, self).__init__()
-            self.op = ''
 
     class CycleList(Action):
         """
