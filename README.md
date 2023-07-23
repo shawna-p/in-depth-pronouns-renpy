@@ -72,7 +72,7 @@ Author’s Notes
 
 This code is adapted from the code I wrote for [Our Life: Now & Forever](https://gbpatch.itch.io/our-life-nf) by GB Patch Games. Try the free demo to see how we handled character customization! 
 
-I am also planning on releasing a “multi-thumb slider bar” code soon, with code included so you can adapt it to be used for determining pronoun frequency for randomization. It will be released as a separate listing on itch.io only (not GitHub) for a small fee. [Follow me on itch.io](https://feniksdev.itch.io/in-depth-pronouns-for-renpy) to be sure you don't miss the release! Here's a small teaser:
+I also have a listing for "multi-thumb bar" code (only available on itch.io, for a small fee), with code included so you can adapt it to be used for determining pronoun frequency for randomization. You can find it here: https://feniksdev.itch.io/multi-thumb-bar-for-renpy
 
 ![](https://img.itch.zone/aW1nLzEyODIzODk3LmdpZg==/original/c955SL.gif)  
 
